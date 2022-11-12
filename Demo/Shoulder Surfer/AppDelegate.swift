@@ -25,15 +25,15 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         AppDelegate.allInstances += 1
         instance = AppDelegate.allInstances
 
-        let initMessage = String(format: Constants.InitialisationMessage, instance)
-        print(initMessage)
+        // let initMessage = String(format: Constants.InitialisationMessage, instance)
+        // print(initMessage)
 
         super.init()
     }
 
     deinit {
-        let deinitMessage = String(format: Constants.DeinitialisationMessage, instance)
-        print(deinitMessage)
+        // let deinitMessage = String(format: Constants.DeinitialisationMessage, instance)
+        // print(deinitMessage)
 
         AppDelegate.allInstances -= 1
     }

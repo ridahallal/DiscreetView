@@ -30,8 +30,8 @@ final class VisualEffectView: UIVisualEffectView {
         VisualEffectView.allInstances += 1
         instance = VisualEffectView.allInstances
 
-        let initMessage = String(format: Constants.InitialisationMessage, instance)
-        print(initMessage)
+        // let initMessage = String(format: Constants.InitialisationMessage, instance)
+        // print(initMessage)
 
         self.intensity = intensity
         self.visualEffect = visualEffect
@@ -44,8 +44,8 @@ final class VisualEffectView: UIVisualEffectView {
     deinit {
         animator?.stopAnimation(true)
 
-        let deinitMessage = String(format: Constants.DeinitialisationMessage, instance)
-        print(deinitMessage)
+        // let deinitMessage = String(format: Constants.DeinitialisationMessage, instance)
+        // print(deinitMessage)
 
         VisualEffectView.allInstances -= 1
     }

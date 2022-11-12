@@ -35,8 +35,8 @@ final class DemoViewController: UIViewController {
         DemoViewController.allInstances += 1
         instance = DemoViewController.allInstances
 
-        let initMessage = String(format: Constants.InitialisationMessage, instance)
-        print(initMessage)
+        // let initMessage = String(format: Constants.InitialisationMessage, instance)
+        // print(initMessage)
 
         self.viewModel = viewModel
 
@@ -47,8 +47,8 @@ final class DemoViewController: UIViewController {
     required init?(coder: NSCoder) { return nil }
 
     deinit {
-        let deinitMessage = String(format: Constants.DeinitialisationMessage, instance)
-        print(deinitMessage)
+        // let deinitMessage = String(format: Constants.DeinitialisationMessage, instance)
+        // print(deinitMessage)
 
         DemoViewController.allInstances -= 1
     }

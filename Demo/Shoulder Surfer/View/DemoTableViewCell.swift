@@ -45,8 +45,8 @@ final class DemoTableViewCell: UITableViewCell {
         DemoTableViewCell.allInstances += 1
         instance = DemoTableViewCell.allInstances
 
-        let initMessage = String(format: Constants.InitialisationMessage, instance)
-        print(initMessage)
+        // let initMessage = String(format: Constants.InitialisationMessage, instance)
+        // print(initMessage)
 
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
@@ -56,8 +56,8 @@ final class DemoTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) { return nil }
 
     deinit {
-        let deinitMessage = String(format: Constants.DeinitialisationMessage, instance)
-        print(deinitMessage)
+        // let deinitMessage = String(format: Constants.DeinitialisationMessage, instance)
+        // print(deinitMessage)
 
         DemoTableViewCell.allInstances -= 1
     }

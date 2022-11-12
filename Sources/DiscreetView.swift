@@ -37,8 +37,8 @@ public class DiscreetView: UIView {
         DiscreetView.allInstances += 1
         instance = DiscreetView.allInstances
 
-        let initMessage = String(format: Constants.InitialisationMessage, instance)
-        print(initMessage)
+        // let initMessage = String(format: Constants.InitialisationMessage, instance)
+        // print(initMessage)
 
         super.init(frame: frame)
         listenToProximityChanges()
@@ -52,8 +52,8 @@ public class DiscreetView: UIView {
             name: UIDevice.proximityStateDidChangeNotification,
             object: UIDevice.current)
 
-        let deinitMessage = String(format: Constants.DeinitialisationMessage, instance)
-        print(deinitMessage)
+        // let deinitMessage = String(format: Constants.DeinitialisationMessage, instance)
+        // print(deinitMessage)
 
         DiscreetView.allInstances -= 1
     }
