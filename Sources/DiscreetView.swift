@@ -60,6 +60,8 @@ public class DiscreetView: UIView {
 
     // MARK: - API
 
+    public var isActive = true
+
     public func update() {
         if DiscreetView.isDiscreet {
             removeBlurView()
@@ -133,7 +135,7 @@ private extension DiscreetView {
 
     // UIDevice.proximityStateDidChangeNotification selector
     @objc func proximityDidChange(notification: NSNotification) {
-        guard let device = notification.object as? UIDevice else { return }
+        guard isActive, let device = notification.object as? UIDevice else { return }
 
         if device.proximityState {
             startTime = Date()

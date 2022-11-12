@@ -26,12 +26,12 @@ final class DemoTableViewCell: UITableViewCell {
     }()
 
     private var discreetView: DiscreetView = {
-        let containerView = DiscreetView()
-        containerView.backgroundColor = .systemBackground
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.layer.cornerRadius = Constants.ContainerViewCornerRadius
+        let discreetView = DiscreetView()
+        discreetView.translatesAutoresizingMaskIntoConstraints = false
+        discreetView.layer.cornerRadius = Constants.DiscreetViewCornerRadius
+        discreetView.backgroundColor = Constants.DiscreetViewBackgroundColor
 
-        return containerView
+        return discreetView
     }()
 
     // MARK: - Memory Management
@@ -62,13 +62,18 @@ final class DemoTableViewCell: UITableViewCell {
         DemoTableViewCell.allInstances -= 1
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        discreetView.update()
+    }
+
     // MARK: - Configuration
 
     func configure(with amount: String, _ position: CellPosition) {
         amountLabel.text = amount
         amountLabel.text = amount
         adjustPosition(position)
-        discreetView.update()
     }
 }
 
@@ -83,7 +88,8 @@ extension DemoTableViewCell {
 
         static let SmallPadding: CGFloat = 8
         static let MediumPadding: CGFloat = 16
-        static let ContainerViewCornerRadius: CGFloat = 8
+        static let DiscreetViewCornerRadius: CGFloat = 8
+        static let DiscreetViewBackgroundColor: UIColor = .systemBackground
 
         static let Shown: CGFloat = 1
         static let Faded: CGFloat = 0.5
