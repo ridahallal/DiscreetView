@@ -4,7 +4,7 @@ A UIView subclass that blurs itself when a user waves their hand above of the no
 Inspired by [N26's Discreet Mode](https://n26.com/en-eu/blog/discreet-mode).
 
 ## What does it do?
-
+![Demo](Demo.gif)
 👆🏼 it does this
 
 ## How do I use it?
