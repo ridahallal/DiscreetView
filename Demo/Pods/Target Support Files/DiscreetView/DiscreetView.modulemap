@@ -1,6 +1,0 @@
-module DiscreetView {
-  umbrella header "DiscreetView-umbrella.h"
-
-  export *
-  module * { export * }
-}

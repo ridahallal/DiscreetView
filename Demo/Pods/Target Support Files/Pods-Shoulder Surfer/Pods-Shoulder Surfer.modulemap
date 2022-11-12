@@ -1,6 +1,0 @@
-module Pods_Shoulder_Surfer {
-  umbrella header "Pods-Shoulder Surfer-umbrella.h"
-
-  export *
-  module * { export * }
-}

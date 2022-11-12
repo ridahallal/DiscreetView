@@ -1,5 +1,0 @@
-platform :ios, '13.0'
-
-target 'Shoulder Surfer' do
-  pod 'DiscreetView', :path => "../"
-end
